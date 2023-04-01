@@ -20,6 +20,9 @@ az login --scope https://graph.microsoft.com//.default
 ```
 
 ```
+az login --use-device-code
+```
+
 az account set -s nomedasubscription
 ```
 
