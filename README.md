@@ -15,3 +15,13 @@ Arquivos básicos de introdução ao Terraform
 3 - Instalar o terraform 
 ```
 
+```
+
+az login --scope https://graph.microsoft.com//.default
+az account set -s nomedasubscription
+terraform init
+terraform validate
+terraform plan
+terraform apply -auto-approve
+
+```
