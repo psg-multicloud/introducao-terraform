@@ -16,10 +16,7 @@ Arquivos básicos de introdução ao Terraform
 ```
 
 ```
-
-```
 az login --scope https://graph.microsoft.com//.default
-
 ```
 
 ```
