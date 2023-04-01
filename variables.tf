@@ -5,9 +5,9 @@
 #String
 
 variable "location" {
-  type = string
+  type        = string
   description = "Localizacao dos recursos da Azure"
-  default = "eastus"
+  default     = "eastus"
 }
 
 ##################
@@ -16,20 +16,20 @@ variable "location" {
 
 #String
 variable "name_rg" {
-  type = string
+  type        = string
   description = "nome do resource group"
-  default = "RG-PRD-GLOBALHITSS"
+  default     = "RG-PRD-GLOBALHITSS"
 }
 
 #Map
-variable  "tags" {
-  type = map
+variable "tags" {
+  type        = map(any)
   description = "tags nos recursos e servicos do azure"
   default = {
-     ambiente = "prd"
-     responsavel = "patricia"
-     centro-de-custo = "globalhitss"   
-     provisioner = "terraform"  
+    ambiente        = "prd"
+    responsavel     = "patricia"
+    centro-de-custo = "globalhitss"
+    provisioner     = "terraform"
   }
 }
 
@@ -40,55 +40,55 @@ variable  "tags" {
 #String
 
 variable "name_subnet" {
-  type = string
+  type        = string
   description = "nome da subnet azure"
-  default = "subnet-prd-globalhitss"
+  default     = "subnet-prd-globalhitss"
 }
 
 #String
 
 variable "name_vnet" {
-  type = string
+  type        = string
   description = "nome da vnet azure"
-  default = "vnet-prd-globalhitss"
+  default     = "vnet-prd-globalhitss"
 }
 
 #List
 
 variable "vnet_address_space" {
-  type = list
+  type        = list(any)
   description = "address space vnet Azure"
-  default = ["10.0.0.0/16", "192.168.0.0/16"]
+  default     = ["10.0.0.0/16", "192.168.0.0/16"]
 }
 
 #List
 
 variable "subnet_address" {
-  type = list
+  type        = list(any)
   description = "address subnet prd Azure"
-  default = ["10.0.2.0/24"]
+  default     = ["10.0.2.0/24"]
 }
 
 #String
 
 variable "pip_prd" {
-    type = string
-    description = "nome do ip publico vm prd"
-    default = "pip-prd" 
+  type        = string
+  description = "nome do ip publico vm prd"
+  default     = "pip-prd"
 }
 
 #String
 variable "nic_prd" {
-    type = string
-    description = "nome da nic vm prd"
-    default = "nic_prd"
+  type        = string
+  description = "nome da nic vm prd"
+  default     = "nic_prd"
 }
 
 #String
 variable "name_config_pip" {
-    type = string
-    description = "nome da config ip"
-    default = "ipexterno-config"
+  type        = string
+  description = "nome da config ip"
+  default     = "ipexterno-config"
 }
 
 
@@ -99,31 +99,31 @@ variable "name_config_pip" {
 #String
 
 variable "user" {
-  type = string
+  type        = string
   description = "user vm"
-  default = "adminuser"
+  default     = "adminuser"
 }
 
 #String
 
 variable "pass" {
-  type = string
+  type        = string
   description = "senha vm"
-  default = "Cy260017@2020#"
+  default     = "Cy260017@2020#"
 }
 
 #String
 variable "size_vm" {
-  type = string
+  type        = string
   description = "size vm"
-  default = "Standard_B1ls"
+  default     = "Standard_B1ls"
 }
 
 #String
 variable "name_vm" {
-  type = string
+  type        = string
   description = "Nome da Vm Azure"
-  default = "azuvmwin01"
+  default     = "azuvmwin01"
 }
 
 #####################
@@ -133,19 +133,19 @@ variable "name_vm" {
 #String
 
 variable "name_nsg" {
-    type = string
-    description = "nome do grupo de segurança Azure"
-    default = "nsg-prd"
+  type        = string
+  description = "nome do grupo de segurança Azure"
+  default     = "nsg-prd"
 }
 
 #String
 
 variable "regras_entrada_basicas" {
-    type = map(any)
-    default = {
-      110 = 80
-      120 = 443
-      130 = 3389
-      140 = 22
-    } 
+  type = map(any)
+  default = {
+    110 = 80
+    120 = 443
+    130 = 3389
+    140 = 22
+  }
 }
