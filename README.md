@@ -17,11 +17,29 @@ Arquivos básicos de introdução ao Terraform
 
 ```
 
+```
 az login --scope https://graph.microsoft.com//.default
-az account set -s nomedasubscription
-terraform init
-terraform validate
-terraform plan
-terraform apply -auto-approve
 
 ```
+
+```
+az account set -s nomedasubscription
+```
+
+```
+terraform init
+```
+
+```
+terraform validate
+```
+
+```
+terraform plan
+```
+
+```
+terraform apply -auto-approve
+```
+
+
