@@ -1,7 +1,7 @@
 # introducao-terraform
 Arquivos básicos de introdução ao Terraform
 
-## Procedimentos necessários antes de executar o provisionamento dos arquivos disponíveis neste git.
+### Procedimentos necessários antes de executar o provisionamento dos arquivos disponíveis neste git.
 
 ```
 1 - Criar conta na Microsoft Azure
@@ -39,3 +39,4 @@ terraform apply -auto-approve
 ```
 
 
+![stack Overflow](https://github.com/psg-multicloud/introducao-terraform/blob/main/terraform1.jpg)
